@@ -8,20 +8,25 @@ class Person {
 		return this.name;
 	}
 
+	set name(newname){
+		this.name=newname;
+	}
+
 	set age(newage){
 		this.age=newage;
 	}
 }
 
 class Student extends Person {
+	
 	study(){
-		console.log(`$(super(name)) is studying`);
+		console.log(`$(this.name) is studying`);
 	}
 }
 
 class Teacher extends Person {
 	teach(){
-		console.log(`$(super(name)) is teaching`);
+		console.log(`$(this.name) is teaching`);
 	}
 }
 
